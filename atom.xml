@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://isjyi.github.io</id>
     <title>Toradora</title>
-    <updated>2020-05-14T09:51:59.155Z</updated>
+    <updated>2020-05-23T00:31:39.566Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://isjyi.github.io"/>
     <link rel="self" href="https://isjyi.github.io/atom.xml"/>
@@ -10,6 +10,226 @@
     <logo>https://isjyi.github.io/images/avatar.png</logo>
     <icon>https://isjyi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Toradora</rights>
+    <entry>
+        <title type="html"><![CDATA[Golang 速查表]]></title>
+        <id>https://isjyi.github.io/post/golang-su-cha-biao/</id>
+        <link href="https://isjyi.github.io/post/golang-su-cha-biao/">
+        </link>
+        <updated>2020-05-23T00:12:55.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="目录">目录</h2>
+<ol>
+<li>
+<p>基础语法</p>
+</li>
+<li>
+<p>运算符</p>
+<ul>
+<li>算术运算符</li>
+<li>比较运算符</li>
+<li>逻辑运算符</li>
+<li>其他</li>
+</ul>
+</li>
+<li>
+<p>声明</p>
+</li>
+<li>
+<p>函数</p>
+<ul>
+<li>函数作为值和回调使用</li>
+<li>可变参数函数</li>
+</ul>
+</li>
+<li>
+<p>内置类型</p>
+</li>
+<li>
+<p>类型转换</p>
+</li>
+<li>
+<p>package</p>
+</li>
+<li>
+<p>流程控制结构</p>
+<ul>
+<li>条件判断（if）</li>
+<li>循环（for）</li>
+<li>多条件分支（switch）</li>
+</ul>
+</li>
+<li>
+<p>array, slice, range</p>
+<ul>
+<li>array</li>
+<li>slice</li>
+<li>array 和 slice 的操作函数</li>
+</ul>
+</li>
+<li>
+<p>map</p>
+</li>
+<li>
+<p>结构体</p>
+</li>
+<li>
+<p>指针</p>
+</li>
+<li>
+<p>接口</p>
+</li>
+<li>
+<p>结构体和接口的组合嵌入</p>
+</li>
+<li>
+<p>Errors</p>
+</li>
+<li>
+<p>并发</p>
+<ul>
+<li>goroutine</li>
+<li>channel</li>
+<li>channel 开发原则</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+</li>
+<li>
+<p>代码片段</p>
+<ul>
+<li>Http-Server</li>
+</ul>
+</li>
+</ol>
+<h2 id="前言">前言</h2>
+<h3 id="参考">参考</h3>
+<p>文中大部分代码都摘抄自 <a href="http://tour.golang.org/">A Tour of Go</a>，对新手来说是很好的参考资料。</p>
+<h3 id="go-特性">Go 特性</h3>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%8C%87%E4%BB%A4%E5%BC%8F%E7%B7%A8%E7%A8%8B">命令式编程</a></li>
+<li>静态类型</li>
+<li>类 C 语法（括号使用频率更少 &amp; 无需分号），类 <a href="https://www.inf.ethz.ch/personal/wirth/Oberon/Oberon07.Report.pdf">Oberon-2</a> 的语法结构</li>
+<li>代码能编译为本地可执行文件（无需 JVM 类的虚拟机）</li>
+<li><code>struct</code> 和 <code>method</code> 取代类的概念</li>
+<li>接口</li>
+<li><a href="http://golang.org/doc/effective_go.html#embedding">类型组合</a> 取代显式继承</li>
+<li>有<a href="https://zh.wikipedia.org/wiki/%E5%A4%B4%E7%AD%89%E5%87%BD%E6%95%B0">头等函数</a></li>
+<li>有回调函数</li>
+<li>函数可有多个返回值</li>
+<li>保留指针，但不能直接参与算术运算</li>
+<li>内置并发原语：<code>goroutine</code> 和 <code>channel</code></li>
+</ul>
+<h2 id="基础语法">基础语法</h2>
+<h3 id="hello-world">Hello World</h3>
+<p>文件 <code>hello.go</code>：</p>
+<pre><code class="language-java">package main
+
+import &quot;fmt&quot;
+
+func main() {
+	fmt.Println(&quot;Hello Go&quot;)
+}
+</code></pre>
+<p>运行：<code>$ go run hello.go</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ETCD 基本使用]]></title>
+        <id>https://isjyi.github.io/post/etcd-ji-ben-shi-yong/</id>
+        <link href="https://isjyi.github.io/post/etcd-ji-ben-shi-yong/">
+        </link>
+        <updated>2020-05-15T06:47:01.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="etcd简介">etcd简介</h1>
+<p>etcd是CoreOS团队于2013年6月发起的开源项目，它的目标是构建一个高可用的分布式键值（key-value）数据库。etcd内部采用raft协议作为一致性算法，etcd给予go语言实现。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="etcd简介">etcd简介</h1>
+<p>etcd是CoreOS团队于2013年6月发起的开源项目，它的目标是构建一个高可用的分布式键值（key-value）数据库。etcd内部采用raft协议作为一致性算法，etcd给予go语言实现。</p>
+<!-- more -->
+<p>etcd作为服务发现系统，有以下的特点：</p>
+<ul>
+<li>简单：安装配置简单，而且提供了HTTP API进行交互，使用也很简单</li>
+<li>安全：支持SSL证书验证</li>
+<li>快捷：根据官方提供的benchmark数据，单实例支持每秒2k+读操作</li>
+<li>可靠：采用raft算法，实现分布式系统数据的可用性和一致性</li>
+</ul>
+<p>etcd项目地址：</p>
+<p><a href="https://github.com/etcd-io/etcd">etcd</a></p>
+<h1 id="etcd应用场景">etcd应用场景</h1>
+<p>etcd比较多的应用场景是用于服务发现，服务发现（Service Discovery）要解决的是分布式系统中最常见的问题之一，即在同一个分布式集群中的进程或服务如何才能找到对方并建立连接。</p>
+<p>从本质上说，服务发现就是要了解集群中是否有进程在监听udp或者tcp端口，并且通过名字就可以进行查找和连接。</p>
+<p>要解决服务发现的问题，需要下面三大支柱，缺一不可：</p>
+<ol>
+<li>一个强一致性、高可用的服务存储目录</li>
+</ol>
+<blockquote>
+<p>基于Ralf算法的etcd天生就是这样一个强一致性、高可用的服务存储目录</p>
+</blockquote>
+<ol start="2">
+<li>一种注册服务和检测服务健康状况的机制</li>
+</ol>
+<blockquote>
+<p>用户可以在etcd中注册服务，并且对注册的服务配置key TTL，定时保持服务的心跳以达到监控健康状态的效果</p>
+</blockquote>
+<ol start="3">
+<li>一种查找和连接服务的机制</li>
+</ol>
+<blockquote>
+<p>通过在etcd指定的主题下注册的服务也能在对应的主题下查找到，为了确保连接，我们可以在每个服务器上都部署一个proxy模式的etcd，这样就可以确保访问etcd集群的服务都能够互相连接</p>
+</blockquote>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://isjyi.github.io/post-images/1589525585575.jpg" alt="" loading="lazy"></figure>
+<h1 id="etcd集群搭建">etcd集群搭建</h1>
+<pre><code class="language-yml">version: '2'
+
+services:
+  etcd1:
+    image: registry.cn-hangzhou.aliyuncs.com/gcr-jerry/etcd:v3.4.7
+    restart: always
+    container_name: etcd1
+    hostname: etcd1
+    command: etcd -name etcd1 -advertise-client-urls http://0.0.0.0:2379 -listen-client-urls http://0.0.0.0:2379 -listen-peer-urls http://0.0.0.0:2380 -initial-cluster-token etcd-cluster -initial-cluster &quot;etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380&quot; -initial-cluster-state new
+    ports:
+      - 12379:2379
+      - 2380
+    networks:
+      byfn:
+        ipv4_address: 172.20.0.2
+
+  etcd2:
+    image: registry.cn-hangzhou.aliyuncs.com/gcr-jerry/etcd:v3.4.7
+    restart: always
+    container_name: etcd2
+    hostname: etcd2
+    command: etcd -name etcd2 -advertise-client-urls http://0.0.0.0:2379 -listen-client-urls http://0.0.0.0:2379 -listen-peer-urls http://0.0.0.0:2380 -initial-cluster-token etcd-cluster -initial-cluster &quot;etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380&quot; -initial-cluster-state new
+    ports:
+      - 22379:2379
+      - 2380
+    networks:
+      byfn:
+        ipv4_address: 172.20.0.3
+
+  etcd3:
+    image: registry.cn-hangzhou.aliyuncs.com/gcr-jerry/etcd:v3.4.7
+    restart: always
+    container_name: etcd3
+    hostname: etcd3
+    command: etcd -name etcd3 -advertise-client-urls http://0.0.0.0:2379 -listen-client-urls http://0.0.0.0:2379 -listen-peer-urls http://0.0.0.0:2380 -initial-cluster-token etcd-cluster -initial-cluster &quot;etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380&quot; -initial-cluster-state new
+    ports:
+      - 32379:2379
+      - 2380
+    networks:
+      byfn:
+        ipv4_address: 172.20.0.4
+
+
+networks:
+  byfn:
+    external:
+      name: net-etcd
+</code></pre>
+<p>相关操作可查看<a href="https://etcd.io/docs/v3.4.0/">文档</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[HTTP]]></title>
         <id>https://isjyi.github.io/post/http/</id>

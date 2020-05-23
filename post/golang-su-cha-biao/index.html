@@ -3,7 +3,7 @@
 	<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimal-ui" />
-    <title>Toradora</title>
+    <title>Golang 速查表 | Toradora</title>
 <link rel='stylesheet' id='puma-css'  href='https://isjyi.github.io/styles/main.css' type='text/css' media='screen' />
 <link rel='stylesheet' id='puma-css'  href='https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css' media='screen' />
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -13,9 +13,9 @@
          <script >hljs.initHighlightingOnLoad();</script>
          
 </head>
-<body class="page page-id-14 page-template page-template-tpl page-template-tpl-archive page-template-tpltpl-archive-php">
+<body class="single single-post postid-3788 single-format-standard">
 	<!--加入跟随滑动的顶部-->
-<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title">
 				<a href="https://isjyi.github.io" title="Toradora">Toradora</a>
@@ -27,7 +27,7 @@
 		</a>
 		
 	</header>
-	<div class="site-navigation-wrapper">
+		<div class="site-navigation-wrapper">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<ul class="primary-nav">
                     
@@ -47,130 +47,137 @@
 	<div class="surface-content">    <main class="main-content">
         <section class="section-body">
                             <header class="section-header u-textAlignCenter">
-                    <h2 class="grap--h2">文章归档</h2>
+                    <h2 class="grap--h2">Golang 速查表</h2>
+                    <div class="block-postMetaWrap">
+                        <time>2020-05-23</time>
+                    </div>
                 </header>
-                        <div class="fancy-archive">
-								
-								
-			<h3 class="archive-year">2020</h3>
-								
-      
-			<ul class="fancy-ul">
+                <div class="grap">
+					
+					<h2 id="目录">目录</h2>
+<ol>
+<li>
+<p>基础语法</p>
+</li>
+<li>
+<p>运算符</p>
+<ul>
+<li>算术运算符</li>
+<li>比较运算符</li>
+<li>逻辑运算符</li>
+<li>其他</li>
+</ul>
+</li>
+<li>
+<p>声明</p>
+</li>
+<li>
+<p>函数</p>
+<ul>
+<li>函数作为值和回调使用</li>
+<li>可变参数函数</li>
+</ul>
+</li>
+<li>
+<p>内置类型</p>
+</li>
+<li>
+<p>类型转换</p>
+</li>
+<li>
+<p>package</p>
+</li>
+<li>
+<p>流程控制结构</p>
+<ul>
+<li>条件判断（if）</li>
+<li>循环（for）</li>
+<li>多条件分支（switch）</li>
+</ul>
+</li>
+<li>
+<p>array, slice, range</p>
+<ul>
+<li>array</li>
+<li>slice</li>
+<li>array 和 slice 的操作函数</li>
+</ul>
+</li>
+<li>
+<p>map</p>
+</li>
+<li>
+<p>结构体</p>
+</li>
+<li>
+<p>指针</p>
+</li>
+<li>
+<p>接口</p>
+</li>
+<li>
+<p>结构体和接口的组合嵌入</p>
+</li>
+<li>
+<p>Errors</p>
+</li>
+<li>
+<p>并发</p>
+<ul>
+<li>goroutine</li>
+<li>channel</li>
+<li>channel 开发原则</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+</li>
+<li>
+<p>代码片段</p>
+<ul>
+<li>Http-Server</li>
+</ul>
+</li>
+</ol>
+<h2 id="前言">前言</h2>
+<h3 id="参考">参考</h3>
+<p>文中大部分代码都摘抄自 <a href="http://tour.golang.org/">A Tour of Go</a>，对新手来说是很好的参考资料。</p>
+<h3 id="go-特性">Go 特性</h3>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%8C%87%E4%BB%A4%E5%BC%8F%E7%B7%A8%E7%A8%8B">命令式编程</a></li>
+<li>静态类型</li>
+<li>类 C 语法（括号使用频率更少 &amp; 无需分号），类 <a href="https://www.inf.ethz.ch/personal/wirth/Oberon/Oberon07.Report.pdf">Oberon-2</a> 的语法结构</li>
+<li>代码能编译为本地可执行文件（无需 JVM 类的虚拟机）</li>
+<li><code>struct</code> 和 <code>method</code> 取代类的概念</li>
+<li>接口</li>
+<li><a href="http://golang.org/doc/effective_go.html#embedding">类型组合</a> 取代显式继承</li>
+<li>有<a href="https://zh.wikipedia.org/wiki/%E5%A4%B4%E7%AD%89%E5%87%BD%E6%95%B0">头等函数</a></li>
+<li>有回调函数</li>
+<li>函数可有多个返回值</li>
+<li>保留指针，但不能直接参与算术运算</li>
+<li>内置并发原语：<code>goroutine</code> 和 <code>channel</code></li>
+</ul>
+<h2 id="基础语法">基础语法</h2>
+<h3 id="hello-world">Hello World</h3>
+<p>文件 <code>hello.go</code>：</p>
+<pre><code class="language-java">package main
 
-				<li><a href="https://isjyi.github.io/post/golang-su-cha-biao/">Golang 速查表</a> <em>2020-05-23</em></li>
-				
-			</ul>
-			
-			
-      
-			<ul class="fancy-ul">
+import &quot;fmt&quot;
 
-				<li><a href="https://isjyi.github.io/post/etcd-ji-ben-shi-yong/">ETCD 基本使用</a> <em>2020-05-15</em></li>
-				
-			</ul>
-			
-			
-      
-			
-      
-			
-      
-			
-      
-			
-      
-			
-      
-			
-      
-			
-  
-			<h3 class="archive-year">2019</h3>
-								
-      
-			
-      
-			
-      
-			<ul class="fancy-ul">
+func main() {
+	fmt.Println(&quot;Hello Go&quot;)
+}
+</code></pre>
+<p>运行：<code>$ go run hello.go</code></p>
 
-				<li><a href="https://isjyi.github.io/post/http/">HTTP</a> <em>2019-01-24</em></li>
-				
-			</ul>
-			
-			
-      
-			<ul class="fancy-ul">
+                </div>
 
-				<li><a href="https://isjyi.github.io/post/tcp-de-te-xing/">TCP 的特性</a> <em>2019-01-23</em></li>
-				
-			</ul>
-			
-			
-      
-			<ul class="fancy-ul">
+                <div class="post--keywords" itemprop="keywords">
+					          </div>
 
-				<li><a href="https://isjyi.github.io/post/ip/">IP</a> <em>2019-01-12</em></li>
-				
-			</ul>
-			
-			
-      
-			<ul class="fancy-ul">
 
-				<li><a href="https://isjyi.github.io/post/udp/">UDP</a> <em>2019-01-11</em></li>
-				
-			</ul>
-			
-			
-      
-			<ul class="fancy-ul">
 
-				<li><a href="https://isjyi.github.io/post/https/">HTTPS 基本过程</a> <em>2019-01-10</em></li>
-				
-			</ul>
-			
-			
-      
-			
-      
-			
-  
-			<h3 class="archive-year">2018</h3>
-								
-      
-			
-      
-			
-      
-			
-      
-			
-      
-			
-      
-			
-      
-			
-      
-			<ul class="fancy-ul">
-
-				<li><a href="https://isjyi.github.io/post/linux-file/">Linux 文件常用操作</a> <em>2018-05-10</em></li>
-				
-			</ul>
-			
-			
-      
-			<ul class="fancy-ul">
-
-				<li><a href="https://isjyi.github.io/post/ubuntu-apt-php72/">Ubuntu 安装PHP72</a> <em>2018-03-10</em></li>
-				
-			</ul>
-			
-			
-  
-                        </div>
-			</section>
+                      </section>
     </main>
 </div>
 	<footer class="site-footer u-textAlignCenter">
