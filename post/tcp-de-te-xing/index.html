@@ -1,60 +1,103 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-	<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimal-ui" />
-    <title>TCP 的特性 | Toradora</title>
-<link rel='stylesheet' id='puma-css'  href='https://isjyi.github.io/styles/main.css' type='text/css' media='screen' />
-<link rel='stylesheet' id='puma-css'  href='https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css' media='screen' />
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<script type='text/javascript' src='https://isjyi.github.io/media/scripts/jquery.js'></script>
-<script type='text/javascript' src='https://isjyi.github.io/media/scripts/jquery-migrate.min.js'></script>
-        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
-         <script >hljs.initHighlightingOnLoad();</script>
-         
-</head>
-<body class="single single-post postid-3788 single-format-standard">
-	<!--加入跟随滑动的顶部-->
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title">
-				<a href="https://isjyi.github.io" title="Toradora">Toradora</a>
-			</h1>
-		</div>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TCP 的特性 | Toradora</title>
+<link rel="shortcut icon" href="https://isjyi.github.io/favicon.ico?v=1590385865133">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://isjyi.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="TCP 的特性 | Toradora - Atom Feed" href="https://isjyi.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
-		<a class="primary-nav-trigger" href="javascript:void(0)">
-			<span class="menu-icon"></span>
-		</a>
-		
-	</header>
-		<div class="site-navigation-wrapper">
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<ul class="primary-nav">
-                    
-				<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a title="首页" href="/">首页</a></li>
-                
-				<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a title="归档" href="/archives">归档</a></li>
-                
-				<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a title="标签" href="/tags">标签</a></li>
-                
-				<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a title="关于" href="/post/about">关于</a></li>
-                
-	
-			</ul>
-		</nav>			
-	</div>
-	<!--跟随滑动的顶部结束-->
-	<div class="surface-content">    <main class="main-content">
-        <section class="section-body">
-                            <header class="section-header u-textAlignCenter">
-                    <h2 class="grap--h2">TCP 的特性</h2>
-                    <div class="block-postMetaWrap">
-                        <time>2019-01-23</time>
-                    </div>
-                </header>
-                <div class="grap">
-					
-					<h2 id="tcp-的特性">TCP 的特性</h2>
+
+
+    <meta name="description" content="TCP 的特性
+
+TCP 提供一种面向连接的、可靠的字节流服务
+在一个 TCP 连接中，仅有两方进行彼此通信。广播和多播不能用于 TCP
+TCP 使用校验和，确认和重传机制来保证可靠传输
+TCP 给数据分节进行排序，并使用累积确认保证数据的..." />
+    <meta name="keywords" content="Network" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://isjyi.github.io">
+  <img class="avatar" src="https://isjyi.github.io/images/avatar.png?v=1590385865133" alt="">
+  </a>
+  <h1 class="site-title">
+    Toradora
+  </h1>
+  <p class="site-description">
+    不会飞的猪，只不过是一块猪肉而已。
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              TCP 的特性
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-01-23
+              </span>
+              <span>
+                8 min read
+              </span>
+              
+                <a href="https://isjyi.github.io/tag/4681DluM2/" class="post-tag">
+                  # Network
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="tcp-的特性">TCP 的特性</h2>
 <ul>
 <li>TCP 提供一种面向连接的、可靠的字节流服务</li>
 <li>在一个 TCP 连接中，仅有两方进行彼此通信。广播和多播不能用于 TCP</li>
@@ -147,56 +190,87 @@ TCP 的连接的拆除需要发送四个包，因此称为四次挥手(Four-way 
 <li><a href="http://www.tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/">TCP-Keepalive-HOWTO</a></li>
 </ul>
 
-                </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#tcp-%E7%9A%84%E7%89%B9%E6%80%A7">TCP 的特性</a></li>
+<li><a href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8E%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B">三次握手与四次挥手</a></li>
+<li><a href="#syn%E6%94%BB%E5%87%BB">SYN攻击</a></li>
+<li><a href="#tcp-keepalive">TCP KeepAlive</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li>
+</ul>
+</li>
+</ul>
 
-                <div class="post--keywords" itemprop="keywords">
-					 <a href="https://isjyi.github.io/tag/4681DluM2/" class="post--keyword" data-title="Network" data-type="post_tag" data-term-id="39">Network</a>           </div>
-
-
-
-                      </section>
-    </main>
-</div>
-	<footer class="site-footer u-textAlignCenter">
-    	<div class="footer-branding">
-            <a href="https://isjyi.github.io" title="Toradora">Toradora</a>
-									<p class="site-description">背后的伤疤，是剑士的耻辱。</p>
-			         </div>
-		 <hr />
-		 <div class="social-links">
-		                       
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-				</div>
-        <div class="footer-copy">
-                
+              </div>
+            </div>
+          </article>
         </div>
 
-    </footer>
-	<div class="back-to-top u-hide" onclick="backToTop();"><i class="iconfont icon-xiangshang"></i></div>
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://isjyi.github.io/post/ip/">
+              <h3 class="post-title">
+                IP
+              </h3>
+            </a>
+          </div>
+        
 
-<script type='text/javascript' src='https://isjyi.github.io/media/scripts/main.js'></script>
-</body>
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="https://isjyi.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
 </html>
